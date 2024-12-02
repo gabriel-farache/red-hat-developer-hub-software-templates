@@ -235,6 +235,8 @@ spec:
         description: ${{ parameters.description }}
         repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.repoName }}
         defaultBranch: main
+        owner: ${{ parameters.orgName }}
+        repo: ${{ parameters.repoName }}
         repoVisibility: public
         requiredApprovingReviewCount: 0
         repoVariables:
