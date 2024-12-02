@@ -10,7 +10,7 @@ metadata:
     - java
     - maven
 spec:
-  owner: nmalvankar
+  owner: gfarache
   system: janus-idp
   type: service
 
