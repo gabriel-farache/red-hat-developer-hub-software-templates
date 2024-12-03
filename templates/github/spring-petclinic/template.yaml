@@ -127,10 +127,16 @@ spec:
                   type: string
                   description: The Quay password
                   ui:field: Secret
+                ghToken:
+                  title: GitHub token
+                  type: string
+                  description: The GitHub token
+                  ui:field: Secret
             - required:
                 - imageRepository
                 - namespace
                 - imageUrl
+                - ghToken
               properties:
                 ci:
                   const: ../../../skeletons/tekton/
@@ -246,6 +252,7 @@ spec:
         secrets:
           REGISTRY_USERNAME: '${{ secrets.quayUserName }}'
           REGISTRY_PASSWORD: '${{ secrets.quayPassword }}'
+          GH_TOKEN: '${{ secrets.ghToken }}'
 
     - id: register
       name: Registering the Catalog Info Component
