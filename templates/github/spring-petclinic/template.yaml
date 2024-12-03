@@ -99,6 +99,7 @@ spec:
                 - imageNamespace
                 - quayUserName
                 - quayPassword
+                - ghToken
               properties:
                 ci:
                   const: ./github-actions/
@@ -136,7 +137,6 @@ spec:
                 - imageRepository
                 - namespace
                 - imageUrl
-                - ghToken
               properties:
                 ci:
                   const: ../../../skeletons/tekton/
